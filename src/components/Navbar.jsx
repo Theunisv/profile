@@ -16,14 +16,14 @@ const Navbar = () => {
         
     };
 
-    const [imgSrc, setImgSrc] = useState("/bulboff.png");
+    const [imgSrc, setImgSrc] = useState("bulboff.png");
 
 
     const handleImgClick = () => {
-        setImgSrc((prevSrc) => (prevSrc === "/bulboff.png" ? "/bulbon.png" : "/bulboff.png"));
+        setImgSrc((prevSrc) => (prevSrc === "bulboff.png" ? "bulbon.png" : "bulboff.png"));
         
        const light = document.getElementById("light");  
-        if (imgSrc === "/bulboff.png") 
+        if (imgSrc === "bulboff.png") 
             light.classList.add("glow");
         else
             light.classList.remove("glow");

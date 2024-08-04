@@ -45,7 +45,7 @@ const Projects = () => {
             </div>
             <div>
             {projects.map((project) => {
-            const projectImageSrc = "/" + project.image_link;
+            const projectImageSrc = project.image_link;
             const techStack = project.tech_stack;
             
 
