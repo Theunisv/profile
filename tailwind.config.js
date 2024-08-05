@@ -9,6 +9,7 @@ export default {
   },
   daisyui: {
     themes: [
+      "dark",
       {
         mytheme: {          
               "primary": "#72a276",
