@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useSWR from "swr";
+import TechQuote from "./TechQuote";
 
 const Navbar = () => {
 
@@ -36,23 +36,13 @@ const Navbar = () => {
        
     };
 
-    const fetcher = (...args) => fetch(...args).then((res) => res.json());
-    const [techQuote, setTechQuote] = useState("Loading random tech quote...");
 
-    const swrRandomTech = () => {
-        const { data: randomTech, error, isValidating } = useSWR('https://techy-api.vercel.app/api/text', fetcher);
-        if (error) console.log(error);
-        if(isValidating) setTechQuote("Loading random tech quote...");
-        if(randomTech) setTechQuote(randomTech.text);
-    }
-
-    swrRandomTech();
 
 
     return (
         
         <header className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24'>
-            <div className='top-0 sticky mt-[-7rem]  flex-row ml-20 hidden lg:flex'>
+            <div className='top-0 float-right lg:float-none lg:sticky mt-[-7rem]  flex-row lg:ml-20 flex'>
                 <img id="light" src={imgSrc} className='h-[200px]'/>
                 <img id="drawString" onClick={handleImgClick} src="drawstring.png" className='h-[200px] ml-20 mt-[-50px]' draggable="false"/>
             </div>
@@ -105,10 +95,14 @@ const Navbar = () => {
                 </li>
             </ul>
             
-            <p className="hidden lg:inline">
+            
+            <div className="lg:w-3/5">
+            <p className="text-center block text-primary rounded-lg mb-4">
                 P.S. Click the light-string!
             </p>
-            <p>{techQuote}</p>
+                <a href="https://github.com/PerryPal21/Techy-API" target="_blank" className="block text-center mt-2 leading-tight font-semibold roboto tracking-tight">Nonsensical quote of the day:</a>
+                <TechQuote />
+            </div>
         </header>
     );
 }
