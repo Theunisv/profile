@@ -36,20 +36,12 @@ const Navbar = () => {
        
     };
 
-    async function getRandomTech() {
-    const random = await fetch('https://techy-api.vercel.app/api/text');
-        if(random.ok) {
-            const data = await random.json();
-            document.getElementById("randomTech").innerHTML = data.text;
-        }
-    }
     const fetcher = (...args) => fetch(...args).then((res) => res.json());
-    const randomTechElement = document.getElementById("randomTech");
     const [techQuote, setTechQuote] = useState("Loading random tech quote...");
 
     const swrRandomTech = () => {
         const { data: randomTech, error, isValidating } = useSWR('https://techy-api.vercel.app/api/text', fetcher);
-        if (error) setTechQuote("Failed to load random tech quote");
+        if (error) console.log(error);
         if(isValidating) setTechQuote("Loading random tech quote...");
         if(randomTech) setTechQuote(randomTech.text);
     }
