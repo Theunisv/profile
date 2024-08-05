@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useSWR from "swr";
 
 const Navbar = () => {
 
@@ -34,6 +35,26 @@ const Navbar = () => {
        drawString.classList.add("moveDown");
        
     };
+
+    async function getRandomTech() {
+    const random = await fetch('https://techy-api.vercel.app/api/text');
+        if(random.ok) {
+            const data = await random.json();
+            document.getElementById("randomTech").innerHTML = data.text;
+        }
+    }
+    const fetcher = (...args) => fetch(...args).then((res) => res.json());
+    const randomTechElement = document.getElementById("randomTech");
+    const [techQuote, setTechQuote] = useState("Loading random tech quote...");
+
+    const swrRandomTech = () => {
+        const { data: randomTech, error, isValidating } = useSWR('https://techy-api.vercel.app/api/text', fetcher);
+        if (error) setTechQuote("Failed to load random tech quote");
+        if(isValidating) setTechQuote("Loading random tech quote...");
+        if(randomTech) setTechQuote(randomTech.text);
+    }
+
+    swrRandomTech();
 
 
     return (
@@ -95,6 +116,7 @@ const Navbar = () => {
             <p className="hidden lg:inline">
                 P.S. Click the light-string!
             </p>
+            <p>{techQuote}</p>
         </header>
     );
 }
