@@ -44,7 +44,7 @@ const Navbar = () => {
         <header className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24'>
             <div className='top-0 float-right lg:float-none lg:sticky mt-[-100px] lg:pb-4  flex-row lg:ml-[120px] flex'>
                 <img id="light" src={imgSrc} className='h-[200px] lg:mt-[-80px]'/>
-                <img id="drawString" onClick={handleImgClick} src="drawstring.png" className='h-[200px] ml-14 mt-[-50px] lg:mt-[-120px]' draggable="false"/>
+                <img id="drawString" onClick={handleImgClick} src="drawstring.png" className='cursor-pointer h-[200px] ml-14 mt-[-50px] lg:mt-[-120px]' draggable="false"/>
             </div>
             <div>
                 <h1 className="text-4xl !font-bold tracking-tight roboto text-slate-200 sm:text-5xl">Theunus Voges</h1>

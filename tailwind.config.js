@@ -8,6 +8,9 @@ export default {
     extend: {},
   },
   daisyui: {
+    lightTheme: "dark",
+    darkTheme: "dark",
+    themeRoot: "html",
     themes: [
       "dark",
       {
