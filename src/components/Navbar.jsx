@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
             <div>
                 <h1 className="text-4xl !font-bold tracking-tight roboto text-slate-200 sm:text-5xl">Theunus Voges</h1>
-                <h2 className="mt-3 text-lg !font-bold tracking-tight roboto text-slate-200 sm:text-xl">Junior Software Developer</h2>
+                <h2 className="mt-3 text-lg !font-bold tracking-tight roboto text-slate-200 sm:text-xl">Software Developer</h2>
                 <p className="mt-4 max-w-xs leading-normal">Striving to put the pragmatic back into programming.</p>
 
                 <nav className="nav hidden lg:block" aria-label="In-page jump links">
