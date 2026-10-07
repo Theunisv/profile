@@ -24,7 +24,34 @@ const Experience = () => {
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Experience</h2>
             </div>
             <div className='flex flex-row'>
-                <p className='w-1/4 text-sm'>2022 - Present</p>
+                <p className='w-1/4 text-sm'>Aug 2025 - Present</p>
+                <div className='w-3/4 mt-0 pt-0'>
+                   <span className='!text-bold text-white inline-block'>Intermediate Full-Stack Software Developer · Farmtrack, Stellenbosch</span>
+
+                   <p className='text-sm mt-3'>Working closely with the engineering team on an IoT GPS device for farming vehicles.<br/><br/>This includes:</p>
+                   <ul className='text-sm tracking-tight list-disc list-inside'>
+                        <li>Maintaining and improving the code base: Aurelia, Node.js, ASP.NET Core, MongoDB, Bokeh, MSSQL, AWS, and Docker</li>
+                        <li>Debugging and monitoring in Sentry and AWS CloudWatch</li>
+                        <li>Maintaining and setting up effective AWS alarms to reduce possible downtime</li>
+                        <li>Ticket management and project planning in Jira</li>
+                        <li>Development of a new mobile app: planning, scaffolding, and API integration in React Native</li>
+                        <li>Complete refactor of the legacy code base to a new and modern stack: React, ASP.NET Core, PostgreSQL (with PostGIS), modern log management, Traefik, Docker Swarm, and AWS</li>
+                        <li>Project planning, timelines, mapping deliverables, and identifying new and existing features to port over</li>
+                    </ul>
+                    <ul className="mt-2 flex flex-wrap">
+                        {['ASP.NET Core', 'Aurelia', 'AWS', 'AWS CloudWatch', 'Bokeh', 'Docker', 'Docker Swarm', 'Jira', 'MongoDB', 'MSSQL', 'Node.js', 'PostGIS', 'PostgreSQL', 'React', 'React Native', 'Sentry', 'Traefik'].map((tech) => (
+                            <li key={tech} className="mr-1.5 mt-2">
+                                <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
+                                    {tech}
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+
+                </div>
+            </div>
+            <div className='flex flex-row mt-10'>
+                <p className='w-1/4 text-sm'>2022 - 2025</p>
                 <div className='w-3/4 mt-0 pt-0'>
                    <span className='!text-bold text-white group inline-block hover:text-secondary hover:cursor-pointer'   onClick={() => window.open('https://www.bcx.co.za/our-offices/namibia/', '_blank')}>Junior Software Developer · BCX Namibia<svg xmlns="http://www.w3.org/2000/svg" width={15} className='align-middle mb-1 ml-3 inline hover:fill-secondary group-hover:animate-bounce' fill='currentColor' viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg></span>
 
@@ -41,6 +68,32 @@ const Experience = () => {
                         <li>API development and integration</li>
                     </ul>
                     <ul className="mt-2 flex flex-wrap">
+                        
+                        <li className="mr-1.5 mt-2">
+                            <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
+                                ASP.net
+                            </div>
+                        </li>
+                         <li className="mr-1.5 mt-2">
+                            <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
+                                Azure Cloud Development
+                            </div>
+                        </li>
+                        <li className="mr-1.5 mt-2">
+                            <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
+                                EF Core
+                            </div>
+                        </li>
+                        <li className="mr-1.5 mt-2">
+                            <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
+                                Express JS
+                            </div>
+                        </li>
+                        <li className="mr-1.5 mt-2">
+                            <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
+                                Figma
+                            </div>
+                        </li>
                         <li className="mr-1.5 mt-2">
                             <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
                                 JavaScript
@@ -48,12 +101,7 @@ const Experience = () => {
                         </li>
                         <li className="mr-1.5 mt-2">
                             <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
-                                React
-                            </div>
-                        </li>
-                        <li className="mr-1.5 mt-2">
-                            <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
-                                Figma
+                                Microsoft Power Platform
                             </div>
                         </li>
                         <li className="mr-1.5 mt-2">
@@ -66,9 +114,10 @@ const Experience = () => {
                                 MSSQL
                             </div>
                         </li>
+                        
                         <li className="mr-1.5 mt-2">
                             <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
-                                Express JS
+                                React
                             </div>
                         </li>
                     </ul>

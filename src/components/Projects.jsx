@@ -1,10 +1,7 @@
 import React from 'react';
 import useElementInView from '../hooks/InView';
 import { useEffect } from 'react';
-import { useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
-
-const supabase = createClient("https://xseibevdmgyznivmadmn.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhzZWliZXZkbWd5em5pdm1hZG1uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjI1OTIwMjYsImV4cCI6MjAzODE2ODAyNn0.ifmLApWJlnjinvN10mjaPlm1s1t6Zmsy5NwnGZ8242A");
+import projects from '../data/projects';
 
 const Projects = () => {
 
@@ -23,21 +20,6 @@ const Projects = () => {
         }
       }, [projectsIsInView]);
 
-      const [projects, setProjects] = useState([]);
-
-      useEffect(() => {
-        getProjects();
-      }, []);
-    
-      async function getProjects() {
-        const { data , error } = await supabase.from("projects").select();
-        if(error) {
-            console.log(error);
-            return;
-        }
-        setProjects(data);
-      }
-      
     return (
         <section ref={projectsRef} id="projects" className='mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24' aria-label="About Me">
             <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0b122a]/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">

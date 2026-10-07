@@ -15,7 +15,7 @@ const App = () => {
             <About />
             <Experience />
             <Projects />
-            <p className='text-white text-bold text-center text-xl'>This project was made using <a href='https://vitejs.dev/' target='_blank'>React Vite</a> with trusty <a href='https://tailwindcss.com/' target='_blank'>Tailwind</a>, note that some of the content is loaded in from <a href='https://supabase.com/' target='_blank'>Supabase</a>.</p>
+            <p className='text-white text-bold text-center text-xl'>This project was made using <a href='https://vitejs.dev/' target='_blank'>React Vite</a> with trusty <a href='https://tailwindcss.com/' target='_blank'>Tailwind</a>.</p>
           </main>
       </div>
     </div>

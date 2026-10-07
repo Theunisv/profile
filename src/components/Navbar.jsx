@@ -100,7 +100,7 @@ const Navbar = () => {
             <p className="text-center block text-primary rounded-lg mb-4">
                 P.S. Click the light-string!
             </p>
-                <a href="https://github.com/PerryPal21/Techy-API" target="_blank" className="block text-center mt-2 leading-tight font-semibold roboto tracking-tight">Nonsensical quote of the day:</a>
+                <p className="block text-center mt-2 leading-tight font-semibold roboto tracking-tight">Quote of the day:</p>
                 <TechQuote />
             </div>
         </header>
